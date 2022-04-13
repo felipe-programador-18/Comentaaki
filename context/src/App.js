@@ -13,7 +13,7 @@ const Usedatabase = endpoints => {
     return () => {
      ref.off()
     }
-  }, [])
+  }, [endpoints])
   return {...data, endpoints}
 }
 
