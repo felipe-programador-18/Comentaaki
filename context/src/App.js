@@ -18,10 +18,11 @@ const Comments = () => {
 }
 
 function App() {
-  
+  const[visible, toggle] = useState(true)
   return (
     <div >
        <Comments/>
+       <button onClick={() => toggle(!visible)} > Toggle</button>
     </div>
   )
 }
