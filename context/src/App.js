@@ -11,6 +11,9 @@ const Comments = () => {
      console.log(snapshoot.val())
      setdata(snapshoot.val())
     })
+    return () => {
+      console.log('cleanup')
+    }
   }, [])
   return (
     <pre> {JSON.stringify(data)} </pre>
@@ -21,9 +24,9 @@ function App() {
   const[visible, toggle] = useState(true)
   return (
     <div >
-      
+      <button onClick={() => toggle(!visible)} > Toggle</button>
        {visible && <Comments/> }
-       <button onClick={() => toggle(!visible)} > Toggle</button>
+     
     </div>
   )
 }
