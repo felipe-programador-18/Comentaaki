@@ -1,19 +1,27 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import  firebase from './firebase'
 import './App.css'
 
-function App() {
+
+const Comments = () => {
   const [data, setdata] = useState({})
-  
-  const ref = firebase.database().ref('test')
+  useEffect(() => {
+    const ref = firebase.database().ref('test')
   ref.on('value', snapshoot => {
      console.log(snapshoot.val())
      setdata(snapshoot.val())
     })
+  }, [])
+  return (
+    <pre> {JSON.stringify(data)} </pre>
+  )
+}
+
+function App() {
   
   return (
     <div >
-       <pre> {JSON.stringify(data)} </pre>
+       <Comments/>
     </div>
   )
 }
