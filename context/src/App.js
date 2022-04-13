@@ -5,7 +5,7 @@ import './App.css'
 const Usedatabase = endpoints => {
   const [data, setdata] = useState({})
   useEffect(() => {
-    const ref = firebase.database().ref('test')
+    const ref = firebase.database().ref(endpoints)
   ref.on('value', snapshoot => {
      //console.log(snapshoot.val())
      setdata(snapshoot.val())
@@ -14,7 +14,7 @@ const Usedatabase = endpoints => {
      ref.off()
     }
   }, [endpoints])
-  return {...data, endpoints}
+  return data
 }
 
 const Comments = ({visible}) => {
@@ -25,13 +25,19 @@ const Comments = ({visible}) => {
   )
 }
 
+const A = () => {
+  const data = Usedatabase('test/a')
+  return (<pre> {JSON.stringify(data)} </pre>)
+}
+
+
 function App() {
   const[visible, toggle] = useState(true)
   return (
     <div >
       <button onClick={() => toggle(!visible)} > Toggle</button>
        <Comments visible={visible}/> 
-     
+       <A/>
     </div>
   )
 }
