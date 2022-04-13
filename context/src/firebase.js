@@ -1,4 +1,4 @@
-import React from 'react'
+
 import firebase from 'firebase/app'
 import 'firebase/database' 
 const firebaseConfig = {
@@ -12,5 +12,6 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 
+export default firebase
 
 
