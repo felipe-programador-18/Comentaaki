@@ -14,20 +14,11 @@ const Usedatabase = endpoints => {
      ref.off()
     }
   }, [])
+  return data
 }
 
 const Comments = () => {
-  const [data, setdata] = useState({})
-  useEffect(() => {
-    const ref = firebase.database().ref('test')
-  ref.on('value', snapshoot => {
-     //console.log(snapshoot.val())
-     setdata(snapshoot.val())
-    })
-    return () => {
-     ref.off()
-    }
-  }, [])
+  const data = Usedatabase('test')
   return (
     <pre> {JSON.stringify(data)} </pre>
   )
