@@ -14,11 +14,12 @@ const Usedatabase = endpoints => {
      ref.off()
     }
   }, [])
-  return data
+  return {...data, endpoints}
 }
 
-const Comments = () => {
-  const data = Usedatabase('test')
+const Comments = ({visible}) => {
+  const endpoints = visible ? 'test' : 'test/a'
+  const data = Usedatabase(endpoints)
   return (
     <pre> {JSON.stringify(data)} </pre>
   )
@@ -29,7 +30,7 @@ function App() {
   return (
     <div >
       <button onClick={() => toggle(!visible)} > Toggle</button>
-       {visible && <Comments/> }
+       <Comments visible={visible}/> 
      
     </div>
   )
