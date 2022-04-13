@@ -1,4 +1,4 @@
-import firebase from './firebase'
+import  firebase from './firebase'
 import './App.css'
 
 //create structure about testing connection about firebase
