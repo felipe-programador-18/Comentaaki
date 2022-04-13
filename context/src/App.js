@@ -8,11 +8,11 @@ const Comments = () => {
   useEffect(() => {
     const ref = firebase.database().ref('test')
   ref.on('value', snapshoot => {
-     console.log(snapshoot.val())
+     //console.log(snapshoot.val())
      setdata(snapshoot.val())
     })
     return () => {
-      console.log('cleanup')
+     ref.off()
     }
   }, [])
   return (
