@@ -51,9 +51,13 @@ const A = () => {
 
 function App() {
   const[visible, toggle] = useState(true)
+  const [status, save] = UsedatabasePush('test')
   return (
     <div >
-      <button onClick={() => toggle(!visible)} > Toggle</button>
+      <button onClick={() => { toggle(!visible) 
+         save({value1:1, valorb:2})
+      }} > Toggle</button>
+      Status: {status}
        <Comments visible={visible}/> 
        <A/>
     </div>
