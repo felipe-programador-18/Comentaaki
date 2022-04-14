@@ -18,7 +18,11 @@ const Usedatabase = endpoints => {
   return data
 }
 // create new function to push date
-const UsedatabasePush = 
+//create function to inject another dates
+const UsedatabasePush = endpoints => {
+   const [status, setstatus] = useState('')
+}
+
 
 const Comments = ({visible}) => {
   const endpoints = visible ? 'test' : 'test/a'
