@@ -17,6 +17,8 @@ const Usedatabase = endpoints => {
   }, [endpoints])
   return data
 }
+// create new function to push date
+const UsedatabasePush = 
 
 const Comments = ({visible}) => {
   const endpoints = visible ? 'test' : 'test/a'
