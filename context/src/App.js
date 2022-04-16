@@ -13,7 +13,12 @@ import './App.css'
    })
 })
 */
-firebase.auth()
+firebase.auth().onAuthStateChanged( users => {
+  if(users){
+    console.log(users.displayName)
+    users.updateProfile({displayName:'Felipe Martins Programer 18'})
+  }
+})
 
 
 // this is tipy inject dependence...
