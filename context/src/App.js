@@ -3,12 +3,17 @@ import  firebase from './firebase'
 import './App.css'
 
 // create ways of access with autentication
-firebase
+
+/*firebase
 .auth()
 .createUserWithEmailAndPassword('machadofelipe2016@outlook.com','123martins')
 .then(users => {
-   console.log(users)
+   return users.updateProfile({
+     displayName: 'Felipe Programmer'
+   })
 })
+*/
+firebase.auth()
 
 
 // this is tipy inject dependence...
