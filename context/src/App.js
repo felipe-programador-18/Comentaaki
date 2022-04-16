@@ -64,13 +64,18 @@ const NewComments = props => {
   const [, save] = UsedatabasePush('comments')
   const [comment, setcomment] = useState('')
   const CreateComments = () => {
+    if( comment!== ''){
     save({
       content: comment,
+      
       users:{
         id:"1",
         name:'Felipe programmer 18'
       }
     })
+    // theoriotical this serve to controll state of text area
+    setcomment('')
+    }
   }
 
   return (
