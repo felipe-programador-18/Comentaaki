@@ -68,7 +68,7 @@ const NewComments = props => {
       <textarea value ={comment} onChange={evt => setcomment(evt.target.value)}   />
     <button onClick={() => { 
       save({
-        content:'Hi there, here is my comments!!',
+        content:comment,
        users:{
          id:"1",
          name:'Felipe programmer'
