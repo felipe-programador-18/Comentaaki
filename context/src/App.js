@@ -43,10 +43,7 @@ const Comments = ({visible}) => {
   )
 }
 
-const A = () => {
-  const data = Usedatabase('test/a')
-  return (<pre> {JSON.stringify(data)} </pre>)
-}
+
 
 
 function App() {
@@ -59,7 +56,7 @@ function App() {
       }} > Toggle</button>
       Status: {status}
        <Comments visible={visible}/> 
-       <A/>
+      
     </div>
   )
 }
