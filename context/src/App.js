@@ -34,6 +34,13 @@ const UsedatabasePush = endpoints => {
      return [status, save]
 }
 
+const Comment = (comment) =>{
+  return (
+    <div>
+     {comment.content}
+    </div>
+  )
+}
 
 const Comments = () => {
   const data = Usedatabase('comments')
@@ -44,7 +51,7 @@ const Comments = () => {
   //create variable to caught all ids
    const ids = Object.keys(data)
   return ids.map(id => {
-     return <Comments key={id} comments={data[id]} />
+     return <Comment key={id} comment={data[id]} />
   })
 }
 
