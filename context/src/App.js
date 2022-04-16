@@ -47,7 +47,6 @@ const Comments = ({visible}) => {
 
 
 function App() {
-  const[visible, toggle] = useState(true)
   const [, save] = UsedatabasePush('test')
   return (
     <div >
