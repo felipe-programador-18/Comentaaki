@@ -34,7 +34,7 @@ const UsedatabasePush = endpoints => {
      return [status, save]
 }
 
-const Comment = (comment) =>{
+const Comment = ({comment}) =>{
   return (
     <div>
      {comment.content}
