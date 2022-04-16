@@ -51,10 +51,16 @@ function App() {
   return (
     <div >
       <button onClick={() => { 
-         save({value1:1, valorb:2})
+         save({
+           content:'Hi there, here is my comments!!',
+          users:{
+            id:"1",
+            name:'Felipe programmer'
+          }
+          })
       }} > Toggle</button>
     
-       <Comments visible={visible}/> 
+       <Comments /> 
       
     </div>
   )
