@@ -60,25 +60,29 @@ const Comments = () => {
 }
 
 
-const NewComments = 
+const NewComments = props => {
+  const [, save] = UsedatabasePush('comments')
+  return (
+    <button onClick={() => { 
+      save({
+        content:'Hi there, here is my comments!!',
+       users:{
+         id:"1",
+         name:'Felipe programmer'
+       }
+       })
+   }} > Toggle</button>
+  )
+}
 
 
 
 function App() {
-  const [, save] = UsedatabasePush('comments')
+
   return (
-    <div >
-      <button onClick={() => { 
-         save({
-           content:'Hi there, here is my comments!!',
-          users:{
-            id:"1",
-            name:'Felipe programmer'
-          }
-          })
-      }} > Toggle</button>
-    
-       <Comments /> 
+    <div > 
+      <NewComments/>     
+      <Comments /> 
       
     </div>
   )
