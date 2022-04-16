@@ -35,9 +35,8 @@ const UsedatabasePush = endpoints => {
 }
 
 
-const Comments = ({visible}) => {
-  const endpoints = visible ? 'test' : 'test/a'
-  const data = Usedatabase(endpoints)
+const Comments = () => {
+  const data = Usedatabase('comments')
   return (
     <pre> {JSON.stringify(data)} </pre>
   )
@@ -47,7 +46,7 @@ const Comments = ({visible}) => {
 
 
 function App() {
-  const [, save] = UsedatabasePush('test')
+  const [, save] = UsedatabasePush('comments')
   return (
     <div >
       <button onClick={() => { 
