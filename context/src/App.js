@@ -51,7 +51,7 @@ function App() {
   const [status, save] = UsedatabasePush('test')
   return (
     <div >
-      <button onClick={() => { toggle(!visible) 
+      <button onClick={() => { 
          save({value1:1, valorb:2})
       }} > Toggle</button>
       Status: {status}
