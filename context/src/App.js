@@ -37,7 +37,7 @@ const UsedatabasePush = endpoints => {
 const Comment = ({comment}) =>{
   return (
     <div>
-     {comment.content}
+     {comment.content} por : {comment.users.name}
     </div>
   )
 }
