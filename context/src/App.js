@@ -37,6 +37,10 @@ const UsedatabasePush = endpoints => {
 
 const Comments = () => {
   const data = Usedatabase('comments')
+  // this !data meanings if value is null comparitive
+  if(!data){
+   return <p>Anymore comments send moment</p>
+  }
   return (
     <pre> {JSON.stringify(data)} </pre>
   )
