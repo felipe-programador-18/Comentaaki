@@ -36,8 +36,10 @@ const UsedatabasePush = endpoints => {
 
 const Time = ({TIMESTAMP}) => {
    const date = new Date(TIMESTAMP)
-   
-  return <span>Time Here</span>
+   const hours = date.getHours()
+   const minute = '0'+ date.getMinutes()
+   const second = '0' + date.getSeconds()
+  return `${hours}:${minute.substr(-2)}:${second.substr(-2)}`
 }
 
 // create new comments to adding another way
