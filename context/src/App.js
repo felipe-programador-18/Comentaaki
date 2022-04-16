@@ -34,11 +34,17 @@ const UsedatabasePush = endpoints => {
      return [status, save]
 }
 
+const Time = ({TIMESTAMP}) => {
+   const date = new Date(TIMESTAMP)
+   
+  return <span>Time Here</span>
+}
+
 // create new comments to adding another way
 const Comment = ({comment}) =>{
   return (
     <div>
-     {comment.content} por : {comment.users.name}
+     {comment.content} por : {comment.users.name} em : <Time TIMESTAMP={comment.createAT}/>
     </div>
   )
 }
@@ -67,7 +73,7 @@ const NewComments = props => {
     if( comment!== ''){
     save({
       content: comment,
-      
+      createAT: firebase.database.ServerValue.TIMESTAMP,
       users:{
         id:"1",
         name:'Felipe programmer 18'
