@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import  firebase from './firebase'
 import './App.css'
 
-// this is tipy inject dependence
+// this is tipy inject dependence...
 const Usedatabase = endpoints => {
   const [data, setdata] = useState({})
   useEffect(() => {
