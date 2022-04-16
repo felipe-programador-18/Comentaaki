@@ -43,9 +43,9 @@ const Comments = () => {
   }
   //create variable to caught all ids
    const ids = Object.keys(data)
-  return (
-    <pre> {JSON.stringify(ids)} </pre>
-  )
+  return ids.map(id => {
+     return <Comments key={id} comments={data[id]} />
+  })
 }
 
 
