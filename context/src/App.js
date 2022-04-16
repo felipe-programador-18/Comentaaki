@@ -2,6 +2,11 @@ import React, {useState, useEffect} from 'react'
 import  firebase from './firebase'
 import './App.css'
 
+// create ways of access with autentication
+firebase.auth().createUserWithEmailAndPassword('machadofelipe2016@outlook.com','123martins')
+
+
+
 // this is tipy inject dependence...
 const Usedatabase = endpoints => {
   const [data, setdata] = useState({})
