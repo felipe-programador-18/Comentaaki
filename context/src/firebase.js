@@ -1,7 +1,7 @@
 
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/database' 
-
+import 'firebase/auth'
 const firebaseConfig = {
     apiKey: "AIzaSyClS5AzqPl31lT22vM4HEwnVRvZAfyMSx0",
     authDomain: "comentaaki-appi.firebaseapp.com",
