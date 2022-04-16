@@ -41,8 +41,10 @@ const Comments = () => {
   if(!data){
    return <p>Anymore comments send moment</p>
   }
+  //create variable to caught all ids
+   const ids = Object.keys(data)
   return (
-    <pre> {JSON.stringify(data)} </pre>
+    <pre> {JSON.stringify(ids)} </pre>
   )
 }
 
