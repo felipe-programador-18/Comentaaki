@@ -34,6 +34,7 @@ const UsedatabasePush = endpoints => {
      return [status, save]
 }
 
+// create new comments to adding another way
 const Comment = ({comment}) =>{
   return (
     <div>
@@ -58,6 +59,8 @@ const Comments = () => {
   })
 }
 
+
+const NewComments = 
 
 
 
