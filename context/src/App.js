@@ -62,7 +62,10 @@ const Comments = () => {
 
 const NewComments = props => {
   const [, save] = UsedatabasePush('comments')
+  const [comment, setcomment] = useState('')
   return (
+    <div>
+      <textarea value ={comment} onChange={evt => setcomment(evt.target.value)}   />
     <button onClick={() => { 
       save({
         content:'Hi there, here is my comments!!',
@@ -72,6 +75,7 @@ const NewComments = props => {
        }
        })
    }} > Toggle</button>
+  </div>
   )
 }
 
