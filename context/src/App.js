@@ -4,7 +4,6 @@ import { AuthProvider } from './auth'
 import NewComments from './NewComments'
 import Comments from './Comments'
 
-
 // create ways of access with autentication
 
 /*firebase
@@ -14,14 +13,6 @@ import Comments from './Comments'
    return users.updateProfile({
      displayName: 'Felipe Programmer'
    })
-})
-*/
-/*
-firebase.auth().onAuthStateChanged( users => {
-  if(users){
-    console.log(users.displayName)
-    users.updateProfile({displayName:'Felipe Martins Programer 18'})
-  }
 })
 */
 
