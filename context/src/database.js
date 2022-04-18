@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import firebase from './firebase'
 
 
@@ -20,4 +20,18 @@ export const UsedatabasePush = endpoints => {
       return [status, save]
  }
 
-
+// this is tipy inject dependence...
+export  const Usedatabase = endpoints => {
+    const [data, setdata] = useState({})
+    useEffect(() => {
+      const ref = firebase.database().ref(endpoints)
+    ref.on('value', snapshoot => {
+       //console.log(snapshoot.val())
+       setdata(snapshoot.val())
+      })
+      return () => {
+       ref.off()
+      }
+    }, [endpoints])
+    return data
+  }
