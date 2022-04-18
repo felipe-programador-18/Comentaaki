@@ -26,13 +26,13 @@ firebase.auth().onAuthStateChanged( users => {
 
 
 function App() {
-
+  const [count, setcout] = useState(0)
   return (
-    <AuthContext.Provider value={} >
+    <AuthContext.Provider value={{count, setcout}} >
     <div > 
       <NewComments/>     
       <Comments /> 
-      
+       <button onClick={()=> setcout(count+1)}></button>
     </div>
     </AuthContext.Provider>
   )
