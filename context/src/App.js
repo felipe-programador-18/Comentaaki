@@ -24,24 +24,6 @@ firebase.auth().onAuthStateChanged( users => {
 */
 
 
-// this is tipy inject dependence...
-const Usedatabase = endpoints => {
-  const [data, setdata] = useState({})
-  useEffect(() => {
-    const ref = firebase.database().ref(endpoints)
-  ref.on('value', snapshoot => {
-     //console.log(snapshoot.val())
-     setdata(snapshoot.val())
-    })
-    return () => {
-     ref.off()
-    }
-  }, [endpoints])
-  return data
-}
-// create new function to push date
-//create function to inject another dates
-
 
 const Time = ({TIMESTAMP}) => {
    const date = new Date(TIMESTAMP)
