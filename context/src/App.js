@@ -32,7 +32,6 @@ function App() {
     <div > 
       <NewComments/>     
       <Comments /> 
-       <button onClick={()=> setcout(count+1)}></button>
     </div>
     </AuthContext.Provider>
   )
