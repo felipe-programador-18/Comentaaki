@@ -37,17 +37,6 @@ const Time = ({TIMESTAMP}) => {
   return `${day.substr(-2)}/${month.substr(-2)}/${year} ${hours}:${minute.substr(-2)}:${second.substr(-2)}`
 }
 
-// create new comments to adding another way
-const Comment = ({comment}) =>{
-  return (
-    <div>
-     {comment.content} por : {comment.users.name} em : <Time TIMESTAMP={comment.createAT}/>
-    </div>
-  )
-}
-
-
-
 
 function App() {
 
