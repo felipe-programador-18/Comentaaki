@@ -1,4 +1,5 @@
 import React from 'react'
+import Time from './Time'
 
 // create new comments to adding another way
 const Comment = ({comment}) =>{
