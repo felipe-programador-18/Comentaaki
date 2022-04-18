@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './App.css'
+import { AuthContext } from './auth'
 import NewComments from './NewComments'
 import Comments from './Comments'
 
@@ -27,11 +28,13 @@ firebase.auth().onAuthStateChanged( users => {
 function App() {
 
   return (
+    <AuthContext.Provider value={} >
     <div > 
       <NewComments/>     
       <Comments /> 
       
     </div>
+    </AuthContext.Provider>
   )
 }
 
