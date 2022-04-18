@@ -1,4 +1,5 @@
-
+import {useState} from 'react'
+import firebase from './firebase'
 
 
 //this exporting to here place!!!
@@ -18,3 +19,6 @@ const UsedatabasePush = endpoints => {
      }
       return [status, save]
  }
+
+
+export default UsedatabasePush
