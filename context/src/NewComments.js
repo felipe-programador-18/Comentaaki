@@ -1,5 +1,6 @@
-import {useState} from 'react'
+import React,{useState} from 'react'
 import { UsedatabasePush } from './database'
+import firebase from './firebase'
 
 const NewComments = props => {
     const [, save] = UsedatabasePush('comments')

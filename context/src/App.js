@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import  firebase from './firebase'
 import './App.css'
 import NewComments from './NewComments'
 import Comments from './Comments'
