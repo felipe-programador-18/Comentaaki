@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import  firebase from './firebase'
 import './App.css'
+import NewComments from './NewComments'
 
 // create ways of access with autentication
 
@@ -89,33 +90,6 @@ const Comments = () => {
   return ids.map(id => {
      return <Comment key={id} comment={data[id]} />
   })
-}
-
-
-const NewComments = props => {
-  const [, save] = UsedatabasePush('comments')
-  const [comment, setcomment] = useState('')
-  const CreateComments = () => {
-    if( comment!== ''){
-    save({
-      content: comment,
-      createAT: firebase.database.ServerValue.TIMESTAMP,
-      users:{
-        id:"1",
-        name:'Felipe programmer 18'
-      }
-    })
-    // theoriotical this serve to controll state of text area
-    setcomment('')
-    }
-  }
-
-  return (
-    <div>
-      <textarea value ={comment} onChange={evt => setcomment(evt.target.value)}   />
-    <button onClick={CreateComments} > Toggle</button>
-  </div>
-  )
 }
 
 
