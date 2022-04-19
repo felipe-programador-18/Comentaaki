@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, { useState ,useContext} from 'react'
 import { AuthContext } from './auth'
 
 const UserInfo = () => {
@@ -8,8 +8,9 @@ const UserInfo = () => {
   }
   const {displayName} = auth.users
   const [alternativeDisplayName] = auth.users.email.split('@')
-  return(
+  return( <>
       <p> Hi there!! {displayName || alternativeDisplayName} !  </p>
+  </>
   )
 }
 
