@@ -37,7 +37,7 @@ const UserCreateUser = () => {
     }
    })
  }
-  () .catch(err => {
+   ().catch(err => {
      setstate({
          ...state,
          error: err.message
