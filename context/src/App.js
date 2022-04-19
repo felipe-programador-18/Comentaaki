@@ -14,6 +14,7 @@ function App() {
       <NewComments/>     
       <Comments /> 
       <CreateUser />
+      <UserInfo/>
     </div>
     </AuthProvider>
   )
