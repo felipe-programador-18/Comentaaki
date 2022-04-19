@@ -23,6 +23,7 @@ const UserCreateUser = () => {
      error:'',
      success:''
  })
+
  const CreateUser = (email, password) => {
  firebase
   .auth()
@@ -31,10 +32,15 @@ const UserCreateUser = () => {
     if(users){
         setstate({
             ...state,
-            success : 'ok',
-
+            success:'Ok'
         })
     }
+   })
+   .catch(err => {
+     setstate({
+         ...state,
+         error: err.message
+     })
    })
 }
    return [state, CreateUser]
