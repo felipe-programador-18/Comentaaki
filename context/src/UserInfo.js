@@ -3,14 +3,21 @@ import { AuthContext } from './auth'
 
 //create one function to easily all process!!! 
 //practice so much about that
-const Formdisplay = ({ displayName}) => {
+const Formdisplay = ({ displayName, users}) => {
     const [newDisplayName, setdisplayname] = useState(displayName)
     const onChange = evt => {
         setdisplayname(evt.target.value)
     }
+     
+    //function to save new user
+    const save = () => {
+        if(newDisplayName !== ''){
+            users.updateProfile({ displayName : newDisplayName})
+        }
+    }
     return ( <>
         <input type='text' value={newDisplayName} onChange={onChange}  />
-        <button>Save Display Name</button>
+        <button onClick={save} >Save Display Name</button>
     </>
  )
 }
@@ -29,7 +36,7 @@ const UserInfo = () => {
   
   return( <>
       <p> Hi there!! {dn} !  </p>
-      <Formdisplay displayName={dn} />
+      <Formdisplay displayName={dn} users={auth.users} />
   </>
   )
 }
