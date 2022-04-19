@@ -5,7 +5,7 @@ const CreateUser = () => {
   const auth = useContext(AuthContext)
     return ( <>
     {JSON.stringify(auth.CreateUser)}
-     <button onClick={() => { auth.CreateUser.CreateUser('machadofelipe2016@outlook.com', 'martins18')}} >+++</button>
+     <button onClick={() => { auth.CreateUser.CreateUser('machadoprogrammerfelipe2016@outlook.com', 'martins18')}} >+++</button>
    
    </>)
 }
