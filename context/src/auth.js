@@ -46,6 +46,18 @@ const UserCreateUser = () => {
    return [state, CreateUser]
 }
 
+const useSingOut = () => {
+    const signout = () =>{
+        firebase
+        .auth()
+        .signOut()
+        .then( () => {
+            console.log('sign out')
+        })
+    } 
+    return signout
+}
+
 
 //theorical this gonna control all state aplications!!!
 export const AuthProvider = ({children}) => {
