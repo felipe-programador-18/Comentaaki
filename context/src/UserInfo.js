@@ -37,6 +37,7 @@ const UserInfo = () => {
   return( <>
       <p> Hi there!! {dn} !  </p>
       <Formdisplay displayName={dn} users={auth.users} />
+      <button onClick={auth.signout}> Sair!</button>
   </>
   )
 }
