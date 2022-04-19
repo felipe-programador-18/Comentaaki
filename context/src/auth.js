@@ -46,18 +46,16 @@ const UserCreateUser = () => {
    return [state, CreateUser]
 }
 
-const useSingOut = () => {
-    const signout = () =>{
-        firebase
-        .auth()
-        .signOut()
-        .then( () => {
-            console.log('sign out')
-        })
-    } 
-    return signout
-}
-
+// this object is to create signout!!! 
+//remember i have passes it down
+const signout = () =>{
+    firebase
+    .auth()
+    .signOut()
+    .then( () => {
+        console.log('sign out')
+    })
+} 
 
 //theorical this gonna control all state aplications!!!
 export const AuthProvider = ({children}) => {
@@ -66,7 +64,7 @@ export const AuthProvider = ({children}) => {
   return(
         <AuthContext.Provider value={ {users,
         CreateUser:{
-            CreateUserstate, CreateUser
+            CreateUserstate, CreateUser, signout
         }
         }} >
          {children}
