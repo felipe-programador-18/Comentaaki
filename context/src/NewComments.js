@@ -4,7 +4,7 @@ import firebase from './firebase'
 import { AuthContext } from './auth'
 
 
-const NewComments = props => {
+const NewComments = () => {
     const [, save] = UsedatabasePush('comments')
     const [comment, setcomment] = useState('')
     const auth = useContext(AuthContext)
@@ -21,7 +21,7 @@ const NewComments = props => {
         content: comment,
         createAT: firebase.database.ServerValue.TIMESTAMP,
         users:{
-          id: auth.users.id,
+          id: auth.users.uid,
           name: displayName || alternativeDisplayName
         }
       })
@@ -32,7 +32,7 @@ const NewComments = props => {
   
     return (
       <div>
-        <textarea value ={comment} onChange={evt => setcomment(evt.target.value)}   />
+        <textarea value ={comment} onChange={evt => setcomment(evt.target.value)}   /> <br/>
       <button onClick={CreateComments} > Toggle</button>
     </div>
     )
