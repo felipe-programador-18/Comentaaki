@@ -3,6 +3,7 @@ import './App.css'
 import { AuthProvider } from './auth'
 import NewComments from './NewComments'
 import Comments from './Comments'
+import CreateUser from './CreateUser'
 
 function App() {
  
@@ -11,6 +12,7 @@ function App() {
     <div > 
       <NewComments/>     
       <Comments /> 
+      <CreateUser />
     </div>
     </AuthProvider>
   )
