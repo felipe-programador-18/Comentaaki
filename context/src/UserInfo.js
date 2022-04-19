@@ -5,8 +5,11 @@ import { AuthContext } from './auth'
 //practice so much about that
 const Formdisplay = ({ displayName}) => {
     const [newDisplayName, setdisplayname] = useState(displayName)
+    const onChange = evt => {
+        setdisplayname(evt.target.value)
+    }
     return ( <>
-        <input type='text' value={newDisplayName}  />
+        <input type='text' value={newDisplayName} onChange={onChange}  />
         <button>Save Display Name</button>
     </>
  )
