@@ -5,6 +5,7 @@ import NewComments from './NewComments'
 import Comments from './Comments'
 import CreateUser from './CreateUser'
 import UserInfo from './UserInfo'
+import SingInUser from './SingInUser'
 
 function App() {
  
@@ -14,6 +15,7 @@ function App() {
       <NewComments/>     
       <Comments /> 
       <CreateUser />
+      <SingInUser/>
       <UserInfo/>
     </div>
     </AuthProvider>
