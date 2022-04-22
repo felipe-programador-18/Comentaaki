@@ -18,9 +18,9 @@ const CreateUser = () => {
   return ( <>
     <h3>Create New account</h3>
     {JSON.stringify(auth.CreateUser)}
-    <input type='text' placeholder='Your email:'/>
-    <input type='text' placeholder='Your Password:'/>
-     <button onClick={() => { auth.CreateUser.CreateUser('machadoprogrammerfelipe2016@outlook.com', 'martins18')}} >+++</button>
+    <input type='text' placeholder='Your email:' value={form.email} onChange={onChange('email')}  />
+    <input type='text' placeholder='Your Password:' value={form.passwd} onChange={onChange ('password')}  />
+     <button onClick={() => { auth.CreateUser.CreateUser(form.email, form.passwd)}} >Create accounte !!</button>
    
    </>)
 }
