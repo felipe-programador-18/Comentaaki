@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import firebase from './firebase' 
-
+//remember here stay all state to manager layer!!
 export const AuthContext = React.createContext()
 
 const UseGetUser = () => {
