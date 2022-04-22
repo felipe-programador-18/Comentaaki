@@ -46,6 +46,29 @@ const UserCreateUser = () => {
    return [state, CreateUser]
 }
 
+
+//create part of Sing IN
+const UseSingInUser = () => {
+    const [state, setstate] = useState({
+        error:'',
+        success:''
+    })
+   
+    const SingInUser = (email, password) => {
+    firebase
+     .auth()
+     .signInWithEmailAndPassword(email, password)
+     .catch(err => {
+        setstate({
+            ...state,
+            error: err.message
+        })
+      })
+   }
+      return [state, SingInUser]
+}
+
+
 // this object is to create signout!!! 
 //remember i have passes it down
 const signout = () =>{
@@ -61,6 +84,7 @@ const signout = () =>{
 export const AuthProvider = ({children}) => {
   const users = UseGetUser()
   const [CreateUserstate, CreateUser] = UserCreateUser()
+  const [SingInUserState, SingInUser] = UseSingInUser()
   return(
         <AuthContext.Provider value={ {users,
         CreateUser:{
