@@ -13,6 +13,10 @@ const CreateUser = () => {
      [campo]: evt.target.value
     })
   } 
+   
+  if(auth.users !== null){
+    return null
+  }
   return ( <>
     <h3>Create New account</h3>
     {
