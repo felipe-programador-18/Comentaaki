@@ -17,9 +17,13 @@ const CreateUser = () => {
 
   return ( <>
     <h3>Create New account</h3>
-    {JSON.stringify(auth.CreateUser)}
+    {
+      (auth.CreateUser.CreateUserState.error) !== '' && 
+      <p> {auth.CreateUser.CreateUserState.error} </p>
+    
+    }
     <input type='text' placeholder='Your email:' value={form.email} onChange={onChange('email')}  />
-    <input type='text' placeholder='Your Password:' value={form.passwd} onChange={onChange ('password')}  />
+    <input type='text' placeholder='Your Password:' value={form.passwd} onChange={onChange('password')}  />
      <button onClick={() => { auth.CreateUser.CreateUser(form.email, form.passwd)}} >Create accounte !!</button>
    
    </>)
