@@ -90,6 +90,9 @@ export const AuthProvider = ({children}) => {
         CreateUser:{
             CreateUserstate, CreateUser
         },
+        SingInUser:{
+            SingInUserState, SingInUser
+        },
         signout
         }} >
          {children}

@@ -5,7 +5,6 @@ import { AuthContext } from './auth'
 //using same code!!
 
 
-
 const SingInUser = () => {
   const auth = useContext(AuthContext)
   //here down i create usestate to caught all date of both email and name
@@ -25,14 +24,14 @@ const SingInUser = () => {
   return ( <>
     <h3>Sing in Accont:</h3>
     {
-      auth.CreateUser.CreateUser.error !== '' && 
-      <p> {auth.CreateUser.CreateUser.error} </p>
+      auth.SingInUser.SingInUserState.error !== '' && 
+      <p> {auth.SingInUser.SingInUserState.error} </p>
     
     }
     <input type='text' placeholder='Your email:' value={form.email} onChange={onChange('email')}  />
     <input type='password' placeholder='Your Password:' value={form.passwd} onChange={onChange('passwd')}  />
      
-     <button onClick={() => { auth.CreateUser.CreateUser(form.email, form.passwd)}} >Sing in!</button>
+     <button onClick={() => { auth.SingInUser.SingInUser(form.email, form.passwd)}} >Sing in!</button>
    
    </>)
 }
