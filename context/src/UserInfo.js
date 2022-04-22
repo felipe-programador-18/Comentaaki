@@ -7,8 +7,7 @@ const Formdisplay = ({ displayName, users}) => {
     const [newDisplayName, setdisplayname] = useState(displayName)
     const onChange = evt => {
         setdisplayname(evt.target.value)
-    }
-     
+    }   
     //function to save new user
     const save = () => {
         if(newDisplayName !== ''){
