@@ -12,8 +12,8 @@ function App() {
   return (
     <AuthProvider>
     <div > 
-      <NewComments/>     
-      <Comments /> 
+      <NewComments/>    
+      <Comments/>
       <CreateUser />
       <SingInUser/>
       <UserInfo/>
