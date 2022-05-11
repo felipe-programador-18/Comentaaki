@@ -1,8 +1,8 @@
-
 import firebase from 'firebase/compat/app'
-// remember version new is always import firebase with compat
 import 'firebase/compat/database' 
 import 'firebase/compat/auth'
+
+// remember version new is always import firebase with compat
 const firebaseConfig = {
     apiKey: "AIzaSyClS5AzqPl31lT22vM4HEwnVRvZAfyMSx0",
     authDomain: "comentaaki-appi.firebaseapp.com",
