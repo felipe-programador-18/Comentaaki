@@ -12,9 +12,9 @@ function App() {
   return (
     <AuthProvider>
     <div > 
-      <NewComments/>    
+    <NewComments/>  
       <Comments/>
-      <CreateUser />
+      <CreateUser/>
       <SingInUser/>
       <UserInfo/>
     </div>
