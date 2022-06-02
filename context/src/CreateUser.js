@@ -29,6 +29,7 @@ const CreateUser = () => {
      
      <button onClick={() => { auth.CreateUser.CreateUser(form.email, form.passwd)}} >Create accounte !!</button>
    
+
    </>)
 }
 
