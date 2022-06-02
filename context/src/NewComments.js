@@ -16,7 +16,7 @@ const NewComments = () => {
     const {displayName} = auth.users
     const [alternativeDisplayName] = auth.users.email.split('@')
     const CreateComments = () => {
-      if( comment!== ''){
+      if(comment !== ''){
       save({
         content: comment,
         createAT: firebase.database.ServerValue.TIMESTAMP,
