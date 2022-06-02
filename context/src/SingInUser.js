@@ -22,6 +22,7 @@ const SingInUser = () => {
     return null
   }
   return ( <>
+  <div>
     <h3>Sing in Accont:</h3>
     {
       auth.SingInUser.SingInUserState.error !== '' && 
@@ -32,7 +33,7 @@ const SingInUser = () => {
     <input type='password' placeholder='Your Password:' value={form.passwd} onChange={onChange('passwd')}  />
      
      <button onClick={() => { auth.SingInUser.SingInUser(form.email, form.passwd)}} >Sing in!</button>
-   
+     </div>
    </>)
 }
 
